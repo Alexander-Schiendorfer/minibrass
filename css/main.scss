@@ -100,7 +100,8 @@ body {
 
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 90%;
+      width: 500px;
+      height: 489px;
       margin: auto;
   }
   
@@ -109,4 +110,9 @@ body {
     width: 100%;
     left: 0;
     max-width:100%;
+}
+
+.carousel {
+  max-height: 700px;
+  overflow: hidden;
 }
