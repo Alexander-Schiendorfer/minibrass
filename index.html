@@ -4,9 +4,8 @@ layout: default
 
 <div class="header-container jumbotron">
     <div class="container">
-        <h1>Jekyll Template for Project Websites</h1>
-        <p>Simple and modern design for publishing blog posts, documentation and many more things for your project.
-          You can now clone and start to create a website for your project like this one.</p>
+        <h1>MiniBrass</h1>
+        <p>Modeling preferences and soft constraints -- qualitatively and quantitatively on top of MiniZinc</p>
         <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | prepend: site.baseurl }}" role="button">Learn more</a></p>
     </div>
 </div>
@@ -16,21 +15,73 @@ layout: default
 
     <div class="row">
         <div class="col-md-6">
-            <h2 class="header-light regular-pad">What is Jekyll?</h2>
+            <h2 class="header-light regular-pad">Welcome to MiniBrass</h2>
             <blockquote>
-              <p>Jekyll is a simple, blog-aware, static site generator. It takes a template
-              directory containing raw text files in various formats, runs it through
-              a converter (like <a href="https://daringfireball.net/projects/markdown/">Markdown</a>)
-              and our <a href="https://github.com/Shopify/liquid/wiki">Liquid</a> renderer, and
-              spits out a complete, ready-to-publish static website suitable
-              for serving with your favorite web server. Jekyll also happens to be the engine
-              behind <a href="https://pages.github.com">GitHub Pages</a>, which means you can use Jekyll
-              to host your project’s page, blog, or website from GitHub’s servers <strong>for
-              free</strong>.</p>
+            
+<p>Many combinatorial optimization problems are conveniently expressed using a constraint-based modeling language. They are then solved by powerful constraint programming or mathematical programming solvers.</p>
+
+<p>We provide support for over-constrained problems or problems where desirable properties can be modeled as optional (soft) constraints. Importance is expressed only by means of relations between constraints (see <a href="http://www.isse.uni-augsburg.de/software/minibrass/constraint-relationships.pdf">this 1 slide</a> to get an idea). Our library extensions are built on top of <a href="http://www.minizinc.org/">MiniZinc</a> that facilitates modeling combinatorial optimization problems for various solvers. The library includes:</p>
+
+
+
             </blockquote>
         </div>
+<!-- 
+<ul>
+<li>Convenient expression of soft constraint problems using constraint relationships</li>
+<li>Automatic translation to weighted CSP</li>
+<li>Generic search heuristics</li>
+<li>Consistency checks of the specified relationships</li>
+</ul>
+-->
         <div class="col-md-6 text-center">
-            <img src="img/jekyll-dark.png" alt="" class="img-responsive">
+          
+            
+            <!-- A Carousel -->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="10000">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                   <img src="img/idea.png" alt="" class="img-responsive">
+                  <div class="carousel-caption  d-none d-md-block">
+                    <h3>Combine several goals</h3>
+                    <p>...</p>
+                  </div>
+                </div>
+                <div class="item">
+                    <img src="img/condorcet.png" alt="" class="img-responsive">
+                  <div class="carousel-caption  d-none d-md-block">
+                    <h3>Make <i>social</i> choices</h3>
+                    <p>...</p>
+                  </div>
+                </div>
+                <div class="item">
+                    <img src="img/idea.png" alt="" class="img-responsive">
+                  <div class="carousel-caption  d-none d-md-block" >
+                    <h3>...</h3>
+                    <p>...</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
         </div>
     </div>
 
@@ -39,24 +90,25 @@ layout: default
     <div class="row">
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Easy to install and publish</h3>
-            <p>Get started by clonening source into GitHub account of your project. Thanks to <a href="https://pages.github.com">GitHub Pages</a>,
-              it will be automatically compiled and publsihed under your project's subdomain on `github.io`.
+            <h3 class="text-center">Easy to model</h3>
+            <p>MiniBrass supports various types and flavours of preferences (better-than relations, penalty points or costs, satisfaction percentages ...)
             </p>
         </div>
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Modular Styling and Templating</h3>
-            <p>This template uses <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a> along with <a href="https://bootswatch.com/">Bootwatch themes</a>.
-            You can change the theme or write your custom by overwriting bootstrap sass variables for different color set, font options, etc.</p>
+            <h3 class="text-center">Modular Preference Specifications</h3>
+            <p>You can use several preference specifications for different users and combine them.</p>
         </div>
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Git based source control</h3>
-            <p>Leverege from Git version control system by
-              maintaining your documentation along with the source code; publish the page when you merge to the master branch.</p>
+            <h3 class="text-center">Voting-based Agreements</h3>
+            <p>Make <i>social</i> choices</p>
         </div>
     </div>
+    
+    <hr>
+    
+    
 
 
 </div>

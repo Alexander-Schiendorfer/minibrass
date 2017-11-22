@@ -17,7 +17,10 @@ We provide support for over-constrained problems or problems where desirable pro
 
 ## Quick Example
 
-First, we define variables, domains, and conventional hard constraints
+### Docs
+
+Docs are [collections](https://jekyllrb.com/docs/collections/) of pages stored under `_docs` folder. To create a new page:
+
 **1.** Create a new constraint model
 
 ```

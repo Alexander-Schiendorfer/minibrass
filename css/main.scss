@@ -4,9 +4,7 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-
-
-
+@import "variables";
 @import
   {% if site.bootwatch %}
     "bootswatch/{{site.bootwatch | downcase}}/variables",
@@ -42,7 +40,7 @@ body {
 
 .header-container {
   background-color: black;
-  background: url('../img/bg.jpg') no-repeat 50% 0;
+  background: url('../img/bgneu.png') no-repeat 50% 0;
   color: #fff;
 
   h1 {
@@ -83,4 +81,32 @@ body {
 }
 .navbar-form .has-feedback .form-control-feedback{
   top:10px
+}
+
+
+
+#isseImg {
+  margin-left: 160px;
+}
+
+#unilogos a img {
+  width:100px;
+  margin-top:10px;
+}
+
+#uniImg {
+  margin-left:30px;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 90%;
+      margin: auto;
+  }
+  
+.carousel-caption{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    left: 0;
+    max-width:100%;
 }

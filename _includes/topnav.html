@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
             <a class="navbar-brand" href="{{ site.baseurl }}/">
-                <span><img src="{{site.baseurl}}/img/logonav.png"></span> {{ site.title }}
+                <span><img src="{{site.baseurl}}/img/logonav.png"></span> <!-- {{ site.title }} -->
             </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -16,7 +16,9 @@
                 <li {% if page.sectionid=='docs' %} class="active" {% endif %}><a href="{{ "/docs/home/" | prepend: site.baseurl }}">Docs</a></li>
                 <li {% if page.sectionid=='blog' %} class="active" {% endif %}><a href="{{ site.posts.first.url | prepend: site.baseurl }}">Blog</a></li>
             </ul>
+            <span id="unilogos"><a href="http://www.isse.uni-augsburg.de/"><img id="isseImg" src="{{site.baseurl}}/img/isse.png"/></a><a href="http://www.uni-augsburg.de/"><img id = "uniImg" src="{{site.baseurl}}/img/uniaweb.png"/></a></span> 
             <div class="navbar-right">
+               
                 <form class="navbar-form navbar-left">
                     <div class="form-group has-feedback">
                         <input id="search-box" type="text" class="form-control" placeholder="Search...">
@@ -26,6 +28,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ site.git_address }}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                 </ul>
+                  
             </div>
         </div>
     </div>
