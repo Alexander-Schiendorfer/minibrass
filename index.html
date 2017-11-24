@@ -4,8 +4,8 @@ layout: default
 
 <div class="header-container jumbotron">
     <div class="container">
-        <h1>MiniBrass</h1>
-        <p>Modeling preferences and soft constraints -- qualitatively and quantitatively on top of MiniZinc</p>
+        <h1>MiniBrass - Softer than MiniZinc!</h1>
+        <p>Modeling preferences and soft constraints -- Specifying goals the declarative way</p>
         <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | prepend: site.baseurl }}" role="button">Learn more</a></p>
     </div>
 </div>
@@ -18,9 +18,11 @@ layout: default
             <h2 class="header-light regular-pad">Welcome to MiniBrass</h2>
             <blockquote>
             
-<p>Many combinatorial optimization problems are conveniently expressed using a constraint-based modeling language. They are then solved by powerful constraint programming or mathematical programming solvers.</p>
+<p>Many real-life decision problems under constraints are conveniently expressed using a <b>constraint-based</b> modeling language: Meeting or activity scheduling, production plans, matching problems, etc. <br/>
+They are then solved by powerful constraint programming or mathematical programming solvers. Usually not all constraints can be satisfied -- especially if there are <b>multiple users</b> with individual goals: John wants Fridays off but Mary does not want to stay longer than 2pm on a Friday - still one of them has to work next Friday.</p>
 
-<p>We provide support for over-constrained problems or problems where desirable properties can be modeled as optional (soft) constraints. Importance is expressed only by means of relations between constraints (see <a href="http://www.isse.uni-augsburg.de/software/minibrass/constraint-relationships.pdf">this 1 slide</a> to get an idea). Our library extensions are built on top of <a href="http://www.minizinc.org/">MiniZinc</a> that facilitates modeling combinatorial optimization problems for various solvers. The library includes:</p>
+<p>We provide support for over-constrained problems or problems where desirable properties can be modeled as optional (soft) constraints. Our library extensions are built on top of <a href="http://www.minizinc.org/">MiniZinc</a> that facilitates modeling constraint optimization problems for various solvers. </p>
+<a href="{{ "/docs/home/" | prepend: site.baseurl }}">Find out more</a>
 
 
 
@@ -50,7 +52,7 @@ layout: default
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="img/codeHelloWorld.png" alt="" class="img-responsive">
+                    <a href="{{ "/docs/home/" | prepend: site.baseurl }}"> <img src="img/codeHelloWorld.png" alt="" class="img-responsive"> </a>
                   <div class="carousel-caption  d-none d-md-block" >
                     <h3>...</h3>
                     <p>...</p>

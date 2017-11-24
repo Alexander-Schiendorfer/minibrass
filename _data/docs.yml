@@ -1,11 +1,21 @@
 - title: Getting Started
   docs:
   - home
-  - themes
-  - customization
+  - installation
+  - helloworld
+  - troubleshooting
 
 - title: Examples
   docs:
   - cheatsheet
   - font-awesome
   - bootstrap
+
+
+- title: Language Reference
+  docs:
+  - pvstypes
+  - pvsinstances
+  - morphisms
+  - pvsproducts
+  - sanitychecks

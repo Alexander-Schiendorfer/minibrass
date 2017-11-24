@@ -1,26 +1,41 @@
 ---
-title: Welcome
+title: Welcome to MiniBrass
 permalink: /docs/home/
 redirect_from: /docs/index.html
 ---
 
 ## Getting started
 
-Many combinatorial optimization problems are conveniently expressed using a constraint-based modeling language. They are then solved by powerful constraint programming or mathematical programming solvers.
 
-We provide support for over-constrained problems or problems where desirable properties can be modeled as optional (soft) constraints. Importance is expressed only by means of relations between constraints (see [this slide](http://www.isse.uni-augsburg.de/software/minibrass/constraint-relationships.pdf) to get an idea). Our library extensions are built on top of [MiniZinc](http://www.minizinc.org) that facilitates modeling combinatorial optimization problems for various solvers. The library includes:
+Many combinatorial optimization problems are conveniently expressed using a constraint-based modeling language such as [MiniZinc]. Then they are solved by powerful constraint programming or mathematical programming solvers.
+MiniBrass targets **over-constrained problems** or problems where desirable properties are modeled as optional (soft) constraints. 
+It is a *language* and third-party *MiniZinc library* that adds support for MiniZinc/MiniSearch to model **weak/soft constraints** and preferences systematically. 
+Depending on the problem at hand, importance is expressed in different types.
 
-* Convenient expression of soft constraint problems using constraint relationships
-* Automatic translation to weighted CSP
-* Generic search heuristics
-* Consistency checks of the specified relationships
+Consider this figure to get a quick idea:
+
+![alt text]({{site.baseurl}}/img/codeHelloWorld.png "Logo Title Text 1")
+
+MiniBrass pays tribute to the tradition of naming NICTA's G12 software after elements in the 12th group of the periodic table. Brass is firstly an alloy that contains zinc and, according to the [German Wikipedia](https://de.wikipedia.org/wiki/Messing), 
+> Cold forming is possible with brass alloys containing up to 37% zinc. At higher zinc rates, only warm forming at temperatures > 600 °C is possible.
+
+
+Our library extensions are built on top of [MiniZinc](http://www.minizinc.org) that facilitates modeling combinatorial optimization problems for various solvers. The library includes:
+
+* Separation of constraints and preferences in different files
+* A graphical notation to communicate preference specifications with clients or end-users
+* Automatic conversion between compatible preference types (e.g., set-based maximal satisfaction to weighted CSP)
+* Generic search heuristics based on the goal type
+* Automated consistency checks of the specified user input
+* Preference aggregation by voting strategies to make *socially fair choices* 
 
 ## Quick Example
 
 First, we define variables, domains, and conventional hard constraints
+
 **1.** Create a new constraint model
 
-```
+```c++
 include "classic_o.mzn"; % output of minibrass
 include "soft_constraints/pvs_gen_search.mzn"; 
 
@@ -36,7 +51,8 @@ search pvs_BAB();
 ```
 
 **2.** Create a new preference model
-```
+
+```c++
 include "defs.mbr";
 
 PVS: cr1 = new ConstraintPreferences("cr1") {
@@ -52,14 +68,13 @@ solve cr1;
 output '["x = \(x); y = \(y); z = \(z)"]';
 ```
 
-### Blog posts
+### Tech
 
-Add a new Markdown file such as `2017-05-09-my-post.md` and write the content similar to other post examples.
+MiniBrass is based on these open source projects:
 
-### Pages
+* [MiniZinc] - Of course, its underlying modeling language!
+* [MiniSearch] - an extension of MiniZinc to support more flexible search strategies
 
-The home page is located under `index.html` file. You can change the content or design completely different welcome page for your taste. (You can use [bootstrap componenets](http://getbootstrap.com/components/))
 
-In order to add a new page, create a new html or markdown file under root directory and link it in `_includes/topnav.html`.
-
-## Installation 
+   [MiniZinc]: <http://www.minizinc.org/>
+   [MiniSearch]: <http://www.minizinc.org/minisearch/>
