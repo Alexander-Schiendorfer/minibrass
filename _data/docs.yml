@@ -2,20 +2,18 @@
   docs:
   - home
   - installation
-  - helloworld
+ # - helloworld
   - troubleshooting
+  - citing
 
-- title: Examples
-  docs:
-  - cheatsheet
-  - font-awesome
-  - bootstrap
+#- title: Examples
+#  docs:
+#  - Lexiv
 
-
-- title: Language Reference
-  docs:
-  - pvstypes
-  - pvsinstances
-  - morphisms
-  - pvsproducts
-  - sanitychecks
+#- title: Language Reference
+#  docs:
+#  - pvstypes
+#  - pvsinstances
+#  - morphisms
+#  - pvsproducts
+#  - sanitychecks

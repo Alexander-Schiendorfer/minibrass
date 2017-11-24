@@ -37,7 +37,7 @@ First, we define variables, domains, and conventional hard constraints
 
 ```c++
 include "classic_o.mzn"; % output of minibrass
-include "soft_constraints/pvs_gen_search.mzn"; 
+include "soft_constraints/minibrass.mzn"; 
 
 % the basic, "classic" CSP 
 set of int: DOM = 1..3;
@@ -46,15 +46,14 @@ var DOM: x; var DOM: y; var DOM: z;
 
 solve 
 :: int_search([x,y,z], input_order, indomain_min, complete)
-search pvs_BAB();
-
+search miniBrass();
 ```
 
 **2.** Create a new preference model
 
 ```c++
 include "defs.mbr";
-
+  
 PVS: cr1 = new ConstraintPreferences("cr1") {
    soft-constraint c1: 'x + 1 = y';
    soft-constraint c2: 'z = y + 2';
@@ -64,8 +63,9 @@ PVS: cr1 = new ConstraintPreferences("cr1") {
    useSPD: 'false' ;
 }; 
 
-solve cr1;
 output '["x = \(x); y = \(y); z = \(z)"]';
+
+solve cr1;
 ```
 
 ### Tech
